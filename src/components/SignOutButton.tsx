@@ -3,6 +3,7 @@
 import { signOut } from 'next-auth/react'
 import { FC, useState } from 'react'
 import { Button } from '@/ui/Button'
+import { toast } from './ui/Toast'
 
 
 /**
