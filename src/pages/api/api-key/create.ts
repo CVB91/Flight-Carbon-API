@@ -1,7 +1,7 @@
-import { withMethods } from '@/lib/api-middlewares/with-methods'
+import { withMethods } from '@/lib/api-middleware/with-methods'
 import { authOptions } from '@/lib/auth'
 import { db } from '@/lib/db'
-import { CreateApiData } from '@/types/api/key'
+import { CreateApiData } from '@/types/api/index.d'
 import { nanoid } from 'nanoid'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from 'next-auth'
@@ -23,7 +23,7 @@ const handler = async (
       })
     }
 
-    const existingApiKey = await db.apiKey.findFirst({
+    const existingApiKey = await db.apikey.findFirst({
       where: { userId: user.id, enabled: true },
     })
 
@@ -34,7 +34,7 @@ const handler = async (
       })
     }
 
-    const createdApiKey = await db.apiKey.create({
+    const createdApiKey = await db.apikey.create({
       data: {
         userId: user.id,
         key: nanoid(32),
