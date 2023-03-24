@@ -7,7 +7,7 @@ export function withMethods(methods: string[], handler: NextApiHandler) {
     }
 
     if (req.method === 'OPTIONS') {
-      return res.status(200).end()
+      return res.status(200).json({ body: 'OK' })
     }
 
     return handler(req, res)
