@@ -2,10 +2,10 @@ export const nodejs = `const axios = require("axios");
 
 const options = {
     method: 'POST',
-    url: 'https://similarityapi.com/api/v1/similarity',
+    url: 'https://flightcarbonapi.com/api/v1/flightcarbon',
     params: {
-      text1: 'First text',
-      text2: 'Second text'
+      departure: 'departure iata code',
+      destination: 'destination iata code'
     },
     headers: {
       'Authorization': 'YOUR_API_KEY',
@@ -20,18 +20,18 @@ axios.request(options).then(function (response) {
 
 export const python = `import requests
 
-url = 'https://similarityapi.com/api/v1/similarity'
+url = 'https://flightcarbonapi.com/api/v1/flightcarbon'
 api_key = 'YOUR_API_KEY'
-text1 = 'First text'
-text2 = 'Second text'
+departure = 'departure iata code'
+destination = 'destination iata code'
 
 headers = {
     'Authorization': api_key
 }
 
 payload = {
-    'text1': text1,
-    'text2': text2
+    'departure': departure,
+    'destination': destination
 }
 
 response = requests.post(url, headers=headers, json=payload)
