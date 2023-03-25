@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 // import MobileMenu from '@/components/MobileMenu'
 import Providers from '@/components/Providers'
 import { cn } from '@/lib/utils'
+import MobileMenu from '@/components/MobileMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,7 @@ export default function RootLayout({
           <Navbar />
           <Toaster position='bottom-right' />
 
-          {/* <MobileMenu /> */}
+          <MobileMenu />
 
           <main>{children}</main>
         </Providers>
