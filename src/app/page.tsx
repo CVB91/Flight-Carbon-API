@@ -17,7 +17,7 @@ export default function Home() {
         <div className='h-full gap-6 flex flex-col justify-start lg:justify-center items-center lg:items-start'>
           <Heading
             size='lg'
-            className='three-d text-black dark:text-light-orange'
+            className=' text-black dark:text-catskill-white'
           >
             Simplify your <br/> carbon footprint
           </Heading>
@@ -26,7 +26,7 @@ export default function Home() {
             Flight Carbon API is an open source API for calculating carbon emissions. Try for free with a unique {' '}
             <Link
               href='/login'
-              className='underline underline-offset-2 text-black dark:text-light-orange'
+              className='underline underline-offset-2 text-black dark:text-catskill-white'
             >
               API key
             </Link>

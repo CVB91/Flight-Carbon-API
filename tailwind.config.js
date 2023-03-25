@@ -26,8 +26,7 @@ module.exports = {
       },
       colors: {
         ...colors,
-        'light-orange': '#f47d57',
-        'dark-green': '#56423C',
+        'catskill-white': '#e2e8f0',
       },
     },
   },
